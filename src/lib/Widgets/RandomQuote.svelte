@@ -14,7 +14,7 @@
 </script>
 
 {#if ready}
-	<blockquote class="space-y-2">
+	<blockquote class="mt-6 space-y-2 border-l-2 pl-6 italic">
 		<p class="text-lg">
 			&ldquo;{quote.content}!&rdquo;
 		</p>
