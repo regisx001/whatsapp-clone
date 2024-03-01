@@ -1,27 +1,43 @@
 <script lang="ts">
-	import { Input } from '@ui/input';
+	import * as ContextMenu from '@ui/context-menu';
 </script>
 
 <section class="relative flex h-full w-full flex-col">
 	<div class="h-full overflow-scroll px-10 pt-6">
 		<div class="space-y-4">
 			{#each Array(10) as item}
-				<div class="bg-muted flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm">
-					Hi, how can I help you today?
-				</div>
-				<div
-					class="bg-primary text-primary-foreground ml-auto flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm"
-				>
-					Hey, I'm having trouble with my account.
-				</div>
-				<div class="bg-muted flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm">
-					What seems to be the problem?
-				</div>
-				<div
-					class="bg-primary text-primary-foreground ml-auto flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm"
-				>
-					I can't log in.
-				</div>
+				<ContextMenu.Root>
+					<ContextMenu.Trigger class="w-full">
+						<div
+							class="bg-primary text-primary-foreground ml-auto flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm"
+						>
+							Hi, how can I help you today? Hi, how can I help you today? Hi, how can I help you
+							today? Hi, how can I help you today?
+						</div>
+					</ContextMenu.Trigger>
+					<ContextMenu.Content>
+						<ContextMenu.Item class="cursor-pointer">Delete</ContextMenu.Item>
+						<ContextMenu.Item class="cursor-pointer">Select</ContextMenu.Item>
+					</ContextMenu.Content>
+				</ContextMenu.Root>
+
+				<ContextMenu.Root>
+					<ContextMenu.Trigger class="w-full">
+						<div
+							class="bg-muted flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm"
+						>
+							What seems to be the problem? What seems to be the problem? What seems to be the
+							problem? What seems to be the problem? What seems to be the problem? What seems to be
+							the problem? What seems to be the problem? What seems to be the problem? What seems to
+							be the problem? What seems to be the problem? What seems to be the problem?
+						</div>
+					</ContextMenu.Trigger>
+					<ContextMenu.Content>
+						<ContextMenu.Item class="cursor-pointer">Reply</ContextMenu.Item>
+						<ContextMenu.Item class="cursor-pointer">Delete</ContextMenu.Item>
+						<ContextMenu.Item class="cursor-pointer">Select</ContextMenu.Item>
+					</ContextMenu.Content>
+				</ContextMenu.Root>
 			{/each}
 		</div>
 	</div>
