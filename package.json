@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"types": "pnpm dlx pocketbase-typegen -j schema.json --out src/lib/types.ts",
 		"build": "vite build",
 		"sync": "vite build && npx cap sync",
 		"preview": "vite preview",

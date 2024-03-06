@@ -18,7 +18,7 @@ const config = {
 			"@main": "src/lib/main",
 			"@icons": "src/lib/Icons",
 			"@utils": "src/lib/utils.ts",
-			"@pb": "src/lib/pocketbase",
+			"@pb": "src/lib/pocketbase.ts",
 		}
 	}
 };

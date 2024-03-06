@@ -1,8 +1,9 @@
 <script lang="ts">
-	import * as ContextMenu from '@ui/context-menu';
+  import * as ContextMenu from "@ui/context-menu"
 </script>
 
-<section class="relative flex h-full w-full flex-col">
+
+<section class=" relative flex h-full w-full flex-col">
 	<div class="h-full overflow-scroll px-10 pt-6">
 		<div class="space-y-4">
 			{#each Array(10) as item}
